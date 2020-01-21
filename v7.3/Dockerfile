@@ -3,7 +3,7 @@ FROM php:7.3-cli
 # Update the package repo
 # and install required PHP extensions
 RUN apt-get update \
-    && apt-get install -y libbz2-dev libxslt-dev libzip-dev nginx supervisor zip \
+    && apt-get install -y libbz2-dev libxslt-dev libzip-dev zip \
     && docker-php-ext-configure zip --with-libzip \
     && docker-php-ext-install bcmath \
     && docker-php-ext-install bz2 \
